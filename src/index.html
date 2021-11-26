@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--    <ul>-->
+    <!--      <li><a href="/Options">Options</a></li>-->
+    <!--      <li><a href="/Full_View">Full_View</a></li>-->
+    <!--    </ul>-->
+
+    <!--    <div class="main">-->
+    <!--      <div class="main__container">-->
+    <!--        <div class="main__container-form">-->
+    <!--          <form method="post">-->
+    <!--            <label for="email">Email</label>-->
+    <!--            <input-->
+    <!--              type="email"-->
+    <!--              id="email"-->
+    <!--              placeholder="Insert your username here"-->
+    <!--            />-->
+    <!--            <label for="password">Password</label>-->
+    <!--            <input-->
+    <!--              type="password"-->
+    <!--              id="password"-->
+    <!--              placeholder="Insert your username here"-->
+    <!--            />-->
+    <!--            <button type="submit">Register</button>-->
+    <!--          </form>-->
+    <!--          <a href="#">Sing Up</a>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </div>-->
+
+    <div>
+      <header class="header">
+        <div class="wrapper">
+          <div class="header__container">
+            <a href="#"><img src="./public/images/Logo.png" alt="Logo" /></a>
+            <!--            <div class="header__container-user">-->
+            <!--              <i class="fas fa-user"></i>-->
+            <!--              <span class="header__container-user-name">Kirill</span-->
+            <!--              ><i class="fas fa-sort-down"></i>-->
+            <!--              <div class="dropdown">-->
+            <!--                <i class="fas fa-power-off"></i>-->
+            <!--                <span>Logout</span>-->
+            <!--              </div>-->
+            <!--            </div>-->
+          </div>
+        </div>
+      </header>
+
+      <main class="main-block">
+        <div class="wrapper">
+          <div class="container">
+            <div class="container__families">
+              <div class="container__families-selects">
+                <div class="container__families-selects-item">
+                  <label for="family">Family (Lev. 1)</label>
+                  <select name="family" id="family">
+                    <option value="" selected>Select a family</option>
+                    <option value="Liquid chillers">Liquid chillers</option>
+                    <option value="Reversible Heat Pumps">
+                      Reversible Heat Pumps
+                    </option>
+                  </select>
+                </div>
+                <div class="container__families-selects-item">
+                  <label for="type">Type (Lev. 2)</label>
+                  <select name="type" id="type" disabled>
+                    <option value="" selected>Select a type</option>
+                    <option value="Air Cooled">Air Cooled</option>
+                    <option value="Water Cooled">Water Cooled</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="container__btn">
+              <button class="container__btn-filter active">
+                Filters Series
+              </button>
+              <button class="container__btn-series continue">
+                Select Series
+              </button>
+            </div>
+            <!-- блок с опциями (сейчас спрятан)-->
+            <div class="container__characteristics active">
+              <div class="container__characteristics-wrap">
+                <div class="container__characteristics-wrap-title">
+                  Application
+                </div>
+                <div class="container__characteristics-wrap-option">
+                  <div class="container__characteristics-wrap-option-1">
+                    <label for="comfort">Comfort</label>
+                    <input type="radio" id="comfort" checked />
+                  </div>
+                  <div class="container__characteristics-wrap-option-2">
+                    <label for="process">Process</label>
+                    <input type="radio" id="process" />
+                  </div>
+                </div>
+              </div>
+              <div class="container__characteristics-wrap">
+                <div class="container__characteristics-wrap-title">
+                  Refrigerant
+                </div>
+                <div class="container__characteristics-wrap-select">
+                  <select name="refrigerant">
+                    <option value="all" selected>All</option>
+                    <option value="r410a">R410a</option>
+                    <option value="r134a">R134a</option>
+                  </select>
+                </div>
+              </div>
+              <div class="container__characteristics-wrap">
+                <div class="container__characteristics-wrap-title">
+                  Compressor
+                </div>
+                <div class="container__characteristics-wrap-compressor">
+                  <div class="container__characteristics-wrap-compressor-box">
+                    <label for="paramScroll">Scroll</label>
+                    <input
+                      type="checkbox"
+                      name="paramScroll"
+                      id="paramScroll"
+                      checked
+                    />
+                  </div>
+                  <div class="container__characteristics-wrap-compressor-box">
+                    <label for="paramScrew">Screw</label>
+                    <input
+                      type="checkbox"
+                      name="paramScrew"
+                      id="paramScrew"
+                      checked
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="container__characteristics-wrap">
+                <div class="container__characteristics-wrap-title">
+                  Evaporators
+                </div>
+                <div class="container__characteristics-wrap-evaporates">
+                  <div class="container__characteristics-wrap-evaporates-1">
+                    <label for="plate">Plate</label>
+                    <input type="radio" id="plate" checked />
+                  </div>
+                  <div class="container__characteristics-wrap-evaporates-2">
+                    <label for="shellAndTube">Shell and tube</label>
+                    <input type="radio" id="shellAndTube" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container__rightBtn active">
+              <button class="container__rightBtn-btn continue">
+                <i class="fas fa-cog"></i>Continue To Unit Selection
+              </button>
+            </div>
+
+            <!-- блок с результатами -->
+
+            <div class="container__result">
+              <div class="container__result-machine">
+                <div class="container__result-machine-panel">
+                  <h2>Series</h2>
+                  <select name="series" id="series" multiple>
+                    <!--                    <option value="0">TCA201XC÷TCA401XC</option>-->
+                    <!--                    <option value="1">TAS165AH÷TAS440AH</option>-->
+                    <option value="3">TASD110.1AC1÷TASD405.2AC1</option>
+                  </select>
+                </div>
+                <div class="container__result-machine-model">
+                  <h2>Models</h2>
+                  <select name="models" id="models" multiple></select>
+                </div>
+                <div class="container__result-machine-img">
+                  <img
+                    src="https://tica.pro/wp-content/uploads/2020/08/air-cooled-screw-chiller-385-kw-316x247-1.jpg.webp"
+                    alt="TASD"
+                  />
+                  <p>
+                    This picture is only a sample of the selected machine. The
+                    real machine's configuration can change depending on
+                    versions and/or accessories selected
+                  </p>
+                </div>
+              </div>
+
+              <div class="container__result-buttons">
+                <div class="container__result-buttons-mode">
+                  <button class="container__result-buttons-mode-btn">
+                    Cooling mode
+                  </button>
+
+                  <div class="container__result-buttons-mode-parameters">
+                    <div
+                      class="
+                        container__result-buttons-mode-parameters-evaporator
+                      "
+                    >
+                      <h2>User side - Evaporator</h2>
+                      <div
+                        class="
+                          container__result-buttons-mode-parameters-evaporator-wrap
+                        "
+                      >
+                        <div
+                          class="
+                            container__result-buttons-mode-parameters-evaporator-wrap-waterIn
+                          "
+                        >
+                          <span>Water in temperature [°C]</span>
+                          <input
+                            type="text"
+                            name="waterInChiller"
+                            value="12"
+                            id="waterInChiller"
+                          />
+                        </div>
+                        <div
+                          class="
+                            container__result-buttons-mode-parameters-evaporator-wrap-waterOut
+                          "
+                        >
+                          <span>Water out temperature [°C]</span>
+                          <input
+                            type="text"
+                            name="waterOutChiller"
+                            value="7"
+                            id="waterOutChiller"
+                          />
+                        </div>
+
+                        <div
+                          class="
+                            container__result-buttons-mode-parameters-evaporator-wrap-fluid
+                          "
+                        >
+                          <span>Fluid</span>
+                          <select name="paramFluid" id="paramFluid">
+                            <option value="0" selected="selected">Water</option>
+                            <option value="5">Propylene Glycol 5%</option>
+                            <option value="10">Propylene Glycol 10%</option>
+                            <option value="15">Propylene Glycol 15%</option>
+                            <option value="20">Propylene Glycol 20%</option>
+                            <option value="25">Propylene Glycol 25%</option>
+                            <option value="30">Propylene Glycol 30%</option>
+                            <option value="35">Propylene Glycol 35%</option>
+                            <option value="40">Propylene Glycol 40%</option>
+                            <option value="45">Propylene Glycol 45%</option>
+                            <option value="50">Propylene Glycol 50%</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="
+                        container__result-buttons-mode-parameters-condenser
+                      "
+                    >
+                      <h2>Source side - Condenser</h2>
+                      <div
+                        class="
+                          container__result-buttons-mode-parameters-condenser-wrap
+                        "
+                      >
+                        <div
+                          class="
+                            container__result-buttons-mode-parameters-condenser-wrap-outdoorTemp
+                          "
+                        >
+                          <span>Outdoor air temperature [°C]</span>
+                          <input
+                            type="text"
+                            name="outdoorAir"
+                            value="35"
+                            id="outdoorAir"
+                          />
+                        </div>
+                        <div
+                          class="
+                            container__result-buttons-mode-parameters-condenser-wrap-humidity
+                          "
+                        >
+                          <span>Rel. humidity [%]</span>
+                          <input
+                            type="text"
+                            name="waterInChiller"
+                            value="50"
+                            id="waterInChiller"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="container__calculate">
+                <button class="container__calculate-btn">
+                  <i class="fas fa-cog"></i>Calculate
+                </button>
+                <button class="container__calculate-file">
+                  <i class="fas fa-file-pdf"></i>
+                </button>
+              </div>
+
+              <div id="tableContainer"></div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
