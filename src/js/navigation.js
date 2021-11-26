@@ -84,12 +84,14 @@ export default () => {
 
   const paramScrew = document.querySelector('#paramScrew'),
     shellAndTube = document.querySelector('#shellAndTube'),
-    idAirCooled = document.querySelector('#AirCooled');
+    idAirCooled = document.querySelector('#AirCooled'),
+    container = document.querySelector('.container');
 
-  btnSeries.addEventListener('click', () => {
-    console.dir(paramScrew);
-    console.dir(shellAndTube);
-    console.log(idAirCooled.selected);
+    container.addEventListener('click', () => {
+   
+    console.log(event.target.checked);
+    console.log(paramScrew);
+    console.log(shellAndTube);
 
     if (paramScrew.checked && shellAndTube.checked && idAirCooled.selected) {
       const option = document.createElement('option');
