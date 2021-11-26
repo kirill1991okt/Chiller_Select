@@ -38,8 +38,6 @@ export default () => {
   //   }
   // });
 
-  // Пробую сделать работу по открытию и сокрытию дивов
-
   const btnFilter = document.querySelector('.container__btn-filter'),
     continueBtn = document.querySelectorAll('.continue'),
     btnSeries = document.querySelector('.container__btn-series'),
@@ -61,7 +59,8 @@ export default () => {
     waterOutChiller = document.getElementById('waterOutChiller'),
     paramFluid = document.getElementById('paramFluid'),
     outdoorAir = document.getElementById('outdoorAir'),
-    tableContainer = document.getElementById('tableContainer');
+    tableContainer = document.getElementById('tableContainer'),
+    imgBlock = document.querySelector('.container__result-machine-img'); // див, где расположена картинка, его надо поменять
 
   btnFilter.addEventListener('click', () => {
     btnFilter.classList.add('active');
@@ -81,6 +80,22 @@ export default () => {
       containerSelectionBtn.classList.remove('active');
       continueSelectionBtn.classList.remove('active');
     });
+  });
+
+  const paramScrew = document.querySelector('#paramScrew'),
+    shellAndTube = document.querySelector('#shellAndTube'),
+    idAirCooled = document.querySelector('#AirCooled');
+
+  btnSeries.addEventListener('click', () => {
+    console.dir(paramScrew);
+    console.dir(shellAndTube);
+    console.log(idAirCooled.selected);
+
+    if (paramScrew.checked && shellAndTube.checked && idAirCooled.selected) {
+      const option = document.createElement('option');
+      option.innerText = 'TASD110.1AC1÷TASD405.2AC1';
+      series.appendChild(option);
+    }
   });
 
   application.addEventListener('click', (event) => {
@@ -108,6 +123,8 @@ export default () => {
       chillers = data;
       drawModels(models, data);
     });
+
+    imgBlock.style.visibility = 'visible'; //Для демонстрации реализован такой способ, в дальнейшем лучше менять урлы картинок
   });
 
   calculate.addEventListener('click', () => {
