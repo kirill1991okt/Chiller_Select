@@ -15,31 +15,32 @@
     <!--      <li><a href="/Options">Options</a></li>-->
     <!--      <li><a href="/Full_View">Full_View</a></li>-->
     <!--    </ul>-->
+    <div class="login open">
+      <div class="main">
+        <div class="main__container">
+          <div class="main__container-form">
+            <form method="post" id="form">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Insert your username here"
+              />
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Insert your username here"
+              />
+              <button type="submit" id="submitBtn">Login</button>
+            </form>
+            <a href="#">Sing Up</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <!--    <div class="main">-->
-    <!--      <div class="main__container">-->
-    <!--        <div class="main__container-form">-->
-    <!--          <form method="post">-->
-    <!--            <label for="email">Email</label>-->
-    <!--            <input-->
-    <!--              type="email"-->
-    <!--              id="email"-->
-    <!--              placeholder="Insert your username here"-->
-    <!--            />-->
-    <!--            <label for="password">Password</label>-->
-    <!--            <input-->
-    <!--              type="password"-->
-    <!--              id="password"-->
-    <!--              placeholder="Insert your username here"-->
-    <!--            />-->
-    <!--            <button type="submit">Register</button>-->
-    <!--          </form>-->
-    <!--          <a href="#">Sing Up</a>-->
-    <!--        </div>-->
-    <!--      </div>-->
-    <!--    </div>-->
-
-    <div>
+    <div id="app">
       <header class="header">
         <div class="wrapper">
           <div class="header__container">
@@ -207,20 +208,14 @@
 
                   <div class="container__result-buttons-mode-parameters">
                     <div
-                      class="
-                        container__result-buttons-mode-parameters-evaporator
-                      "
+                      class="container__result-buttons-mode-parameters-evaporator"
                     >
                       <h2>User side - Evaporator</h2>
                       <div
-                        class="
-                          container__result-buttons-mode-parameters-evaporator-wrap
-                        "
+                        class="container__result-buttons-mode-parameters-evaporator-wrap"
                       >
                         <div
-                          class="
-                            container__result-buttons-mode-parameters-evaporator-wrap-waterIn
-                          "
+                          class="container__result-buttons-mode-parameters-evaporator-wrap-waterIn"
                         >
                           <span>Water in temperature [°C]</span>
                           <input
@@ -231,9 +226,7 @@
                           />
                         </div>
                         <div
-                          class="
-                            container__result-buttons-mode-parameters-evaporator-wrap-waterOut
-                          "
+                          class="container__result-buttons-mode-parameters-evaporator-wrap-waterOut"
                         >
                           <span>Water out temperature [°C]</span>
                           <input
@@ -245,9 +238,7 @@
                         </div>
 
                         <div
-                          class="
-                            container__result-buttons-mode-parameters-evaporator-wrap-fluid
-                          "
+                          class="container__result-buttons-mode-parameters-evaporator-wrap-fluid"
                         >
                           <span>Fluid</span>
                           <select name="paramFluid" id="paramFluid">
@@ -267,20 +258,14 @@
                       </div>
                     </div>
                     <div
-                      class="
-                        container__result-buttons-mode-parameters-condenser
-                      "
+                      class="container__result-buttons-mode-parameters-condenser"
                     >
                       <h2>Source side - Condenser</h2>
                       <div
-                        class="
-                          container__result-buttons-mode-parameters-condenser-wrap
-                        "
+                        class="container__result-buttons-mode-parameters-condenser-wrap"
                       >
                         <div
-                          class="
-                            container__result-buttons-mode-parameters-condenser-wrap-outdoorTemp
-                          "
+                          class="container__result-buttons-mode-parameters-condenser-wrap-outdoorTemp"
                         >
                           <span>Outdoor air temperature [°C]</span>
                           <input
@@ -291,9 +276,7 @@
                           />
                         </div>
                         <div
-                          class="
-                            container__result-buttons-mode-parameters-condenser-wrap-humidity
-                          "
+                          class="container__result-buttons-mode-parameters-condenser-wrap-humidity"
                         >
                           <span>Rel. humidity [%]</span>
                           <input

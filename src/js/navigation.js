@@ -84,16 +84,13 @@ export default () => {
 
   const paramScrew = document.querySelector('#paramScrew'),
     shellAndTube = document.querySelector('#shellAndTube'),
-    idAirCooled = document.querySelector('#AirCooled'),
-    container = document.querySelector('.container');
+    selectFamily = document.querySelector('#family'),
+    selectType = document.querySelector('#type');
 
-    container.addEventListener('click', () => {
-   
-    console.log(event.target.checked);
-    console.log(paramScrew);
-    console.log(shellAndTube);
 
-    if (paramScrew.checked && shellAndTube.checked && idAirCooled.selected) {
+  btnSeries.addEventListener('click', () => {
+
+    if (paramScrew.checked && shellAndTube.checked && selectType.value == 'Air Cooled' && selectFamily.value == 'Liquid chillers') {
       const option = document.createElement('option');
       option.innerText = 'TASD110.1AC1÷TASD405.2AC1';
       series.appendChild(option);

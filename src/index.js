@@ -2,10 +2,12 @@ import './styles/style.scss';
 import navigation from './js/navigation';
 import calculate from './js/calculate';
 import selectFamily from './js/selected';
+import login from './js/login';
 
 navigation();
 calculate();
 selectFamily();
+login();
 
 
 // window.onhashchange = function (ev) {

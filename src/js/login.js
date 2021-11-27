@@ -1,24 +1,46 @@
-const form = document.querySelector('#submitBtn');
+export default () => {
 
-form.addEventListener('submit', () => {
-    const xhr = new XMLHttpRequest;
+    const form = document.querySelector('#form'),
+        email = document.querySelector('#email'),
+        password = document.querySelector('#password'),
+        loginBox = document.querySelector('.login'),
+        appBox = document.querySelector('#app');
 
-    xhr.open('POST', 'ссылку напиши нормальную');
+    form.addEventListener('submit', () => {
+        event.preventDefault();
 
-    xhr.setRequestHeader('Content-Type', 'application/json');
+        const xhr = new XMLHttpRequest;
 
-    xhr.send(
-        JSON.stringify({
-            email: email.value,
-            password: password.value,
-        })
-    );
+        xhr.open('POST', 'https://reqres.in/api/register');
 
-    xhr.onload = function (){
-        const statusType = +String(this.status)[0];
+        xhr.setRequestHeader('Content-Type', 'application/json');
 
-        if(statusType == 2){
-            //должны перейти на страницу подбора
-        }
-    }
-})
+        xhr.send(
+            JSON.stringify({
+                email: email.value,
+                password: password.value,
+            })
+        );
+
+        xhr.onload = function () {
+            const statusType = +String(this.status)[0];
+
+            if (statusType == 2) {
+                console.log(loginBox);
+                console.log(appBox);
+                loginBox.classList.remove('open');
+                appBox.classList.add('open');
+            }
+        };
+    });
+
+
+}
+
+
+
+
+// [{
+//     name: 'TASD110.1AC1÷TASD405.2AC1'
+//     type: B
+// }]
