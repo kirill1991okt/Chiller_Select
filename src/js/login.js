@@ -9,7 +9,7 @@ export default () => {
     form.addEventListener('submit', () => {
         event.preventDefault();
 
-        const xhr = new XMLHttpRequest;
+        const xhr = new XMLHttpRequest();
 
         xhr.open('POST', 'https://reqres.in/api/register');
 
@@ -18,20 +18,30 @@ export default () => {
         xhr.send(
             JSON.stringify({
                 email: email.value,
-                password: password.value,
+                password: password.value
             })
         );
 
         xhr.onload = function () {
             const statusType = +String(this.status)[0];
 
-            if (statusType == 2) {
-                console.log(loginBox);
-                console.log(appBox);
+            if (statusType === 2) {
+                console.log(password.value);
                 loginBox.classList.remove('open');
                 appBox.classList.add('open');
+            } else{
+                alert('Поменять немного кода');
             }
+            
         };
+
+        xhr.onerror = function () {
+    console.log(this.status);
+  };
+
+  xhr.onloadend = function () {
+    console.log('загрузка завершена');
+  };
     });
 
 

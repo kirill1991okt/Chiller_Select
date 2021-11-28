@@ -82,7 +82,7 @@ export default () => {
     });
   });
 
-  const paramScrew = document.querySelector('#paramScrew'),
+  const refrigerant = document.querySelector('#refrigerant'),
     shellAndTube = document.querySelector('#shellAndTube'),
     selectFamily = document.querySelector('#family'),
     selectType = document.querySelector('#type');
@@ -90,7 +90,8 @@ export default () => {
 
   btnSeries.addEventListener('click', () => {
 
-    if (paramScrew.checked && shellAndTube.checked && selectType.value == 'Air Cooled' && selectFamily.value == 'Liquid chillers') {
+    if ((refrigerant.value == 'all' || refrigerant.value == 'r134a') && shellAndTube.checked && selectType.value == 'Air Cooled' && selectFamily.value == 'Liquid chillers') {
+      series.innerHTML = '';
       const option = document.createElement('option');
       option.innerText = 'TASD110.1AC1÷TASD405.2AC1';
       series.appendChild(option);
