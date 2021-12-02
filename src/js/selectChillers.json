@@ -1,0 +1,9 @@
+
+[{
+    "name": "TASD110.1AC1÷TASD405.2AC1",
+    "family": "Liquid chillers",
+    "type": "Air Cooled",
+    "refrigerant": "r134a",
+    "compressor": "paramScrew",
+    "evaporators": "shellAndTube"
+}]
